@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pebble</title>
+    <link href="icons/rock.png" rel="icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="roundslider.css" rel="stylesheet">
+    <script type="text/javascript" src="js/roundslider.js"></script>
+    <script type="text/javascript" src="js/lock.js"></script>
+    <script type="text/javascript" src="js/bulb.js"></script>
+    <script type="text/javascript" src="js/roundslidercontrols.js"></script>
+</head>
+
+<body>
+    <a href="grid.html"> grid</a>
+    <a href="lightbulb.html"> light bulb</a>
+    <div class="row">
+        <div class="columns-3">
+            <div class="card-container">
+                <div class="element-header-background">
+                    <div class="element-topic">
+                        Light Bulb 1
+                    </div>
+                </div>
+                <div class="bulb-components container-fluid">
+                    <div class="bulb-switch">
+                        <div><img id="bulb-change" src="icons/bulb/bulb-off.png"></div>
+                        <div><label class="switch"><input type="checkbox" id="togBtn">
+                                <div class="slider round">
+                                    <div id="bulb-switch">
+                                        <span class="on bulb-on">ON</span><span class="off bulb-off">OFF</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="bulb-mode">
+                        <div class="bulb-option-name">Mode</div>
+                        <div class="dropdown-mode">
+                            <div class="select-dropdown">
+                                <select>
+                                    <option value="Night">Night</option>
+                                    <option value="Reading">Reading</option>
+                                    <option value="Sleeping">Sleeping</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bulb-mode">
+                        <div class="bulb-option-name">Intensity</div>
+                        <div><input type="range" min="1" max="100" step="1" value="15"></div>
+                    </div>
+                    <div class="bulb-mode">
+                        <div class="bulb-option-name">Colour</div>
+                        <div id="color-select">
+                            <div class="yellow-mode color-item active-color"></div>
+                            <div class="red-mode color-item"></div>
+                            <div class="blue-mode color-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns-4">
+            <div class="card-container-ac">
+                <div class="element-header-background">
+                    <div class="element-topic">
+                        Air Conditoner
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="option-name-ac">
+                        Working Modes
+                    </div>
+                    <div class="ac-component">
+                        <div class="ac-modes">
+                            <div class="ac-mode-element">
+                                <div><img class="mode-icon" src="icons/ac/repeat.svg"></div>
+                                <div class="ac-mode-line"></div>
+                                <div class="ac-mode-text">Auto</div>
+                            </div>
+                            <div class="ac-mode-element">
+                                <div><img class="mode-icon" src="icons/ac/eco.svg"></div>
+                                <div class="ac-mode-line"></div>
+                                <div class="ac-mode-text">Eco</div>
+                            </div>
+                            <div class="ac-mode-element">
+                                <div><img class="mode-icon" src="icons/ac/snowflake.svg"></div>
+                                <div class="ac-mode-line"></div>
+                                <div class="ac-mode-text">Cool</div>
+                            </div>
+                            <div class="ac-mode-element">
+                                <div><img class="mode-icon" src="icons/ac/wind.svg"></div>
+                                <div class="ac-mode-line"></div>
+                                <div class="ac-mode-text">Dry</div>
+                            </div>
+                            <div class="ac-mode-element">
+                                <div><img class="mode-icon" src="icons/ac/sun.svg"></div>
+                                <div class="ac-mode-line"></div>
+                                <div class="ac-mode-text">Heat</div>
+                            </div>
+                        </div>
+                        <div class="option-name-ac">Temperature</div>
+                        <div id="ac-slider"></div>
+                        <div class="temp-type">Celcius</div>
+                        <div>
+                            <label class="switch"><input type="checkbox" id="togBtn">
+                                <div class="slider round">
+                                    <span class="on">ON</span><span class="off">OFF</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option-name-ac">Fan Speed</div>
+                    <div class="ac-fan">
+                        <div class="row ac-fan-list">
+                            <div><img class="fan-icon" src="icons/ac/fan.svg"></div>
+                            <div><img class="fan-icon" src="icons/ac/fan.svg"></div>
+                            <div><img class="fan-icon" src="icons/ac/fan.svg"></div>
+                            <div><img class="fan-icon" src="icons/ac/fan-off.svg"></div>
+                            <div><img class="fan-icon" src="icons/ac/fan-off.svg"></div>
+                        </div>
+                    </div>
+                    <div id="ac-direction" class="row ac-direction">
+                        <div class="option-name-ac">Fan Direction</div>
+                        <div class="direction-auto direction-item active-direction">
+                            <div class="direction-text">Auto</div>
+                        </div>
+                        <div class="direction-change direction-item">
+                            <div class="direction-text-change">Change</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns-3">
+            <div class="card-container">
+                <div class="element-header-background">
+                    <div class="element-topic">
+                        Front Door
+                    </div>
+                </div>
+                <div class="row container-fluid top-content-lock">
+                    <div><img class="lock-icon" src="icons/locked.svg"></div>
+                    <div class="lock-flag">Front Door is Locked!</div>
+                    <div class="divider"></div>
+                </div>
+                <div class="controls-bottom container-fluid">
+                    <div class="row">
+                        <div class="door-option">Unlock Door</div>
+                        <div class="pass-wrap">
+                            <input class="pass" placeholder="" type="password">
+                            <div class="pass-view">
+                                <i class="far fa-eye"></i>
+                                <i class="far fa-eye-slash" style="display: none;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="unlock-button">
+                            <div><img class="unlock-icon" src="icons/right.svg"></div>
+                            <div class="unlock-button-text">Unlock</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="records-button">
+                            <div class="records-button-text">Past Activity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns-2">
+            <div class="card-container">
+                <div class="element-header-background">
+                    <div class="element-topic">
+                        Front Door
+                    </div>
+                </div>
+                <div class="row container-fluid top-content-lock">
+                    <div><img class="lock-icon" src="icons/unlocked.svg"></div>
+                    <div class="lock-flag">Front Door is Open!</div>
+                    <div class="divider"></div>
+                </div>
+                <div class="controls-bottom container-fluid">
+                    <div class="row lock-switch">
+                        <div class="lock-option">lock Door</div>
+                        <div class="lock-button">
+                            <div><img class="unlock-icon" src="icons/right.svg"></div>
+                            <div class="unlock-button-text">lock</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="records-button">
+                            <div class="records-button-text">Past Activity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="columns-3">
+            <div class="card-container">
+                <div class="element-header-background confirm-header">
+                    <div class="element-topic">
+                        Confirm
+                    </div>
+                </div>
+                <div class="row container-fluid">
+                    <div class="info-message">Do you want to remove the device from the system?</div>
+                    <div class="divider"></div>
+                </div>
+                <div class="popup-controls">
+                    <div class="cancel-btn">Cancel</div>
+                    <div class="confirm-btn">Confirm</div>
+                </div>
+            </div>
+        </div>
+        <div class="columns-3">
+            <div class="card-container">
+                <div class="element-header-background">
+                    <div class="element-topic">
+                        Success
+                    </div>
+                </div>
+                <div class="row container-fluid error-content">
+                    <div><i class="fas fa-check-circle fa-3x" style="padding-top: 15px;
+                            color: #3FBF5B;"></i></div>
+                    <div class="info-message" style="padding-bottom: unset;">Device has been successfully added to the
+                        system</div>
+                </div>
+                <div class="popup-controls">
+                    <div class="confirm-btn">Okay</div>
+                </div>
+            </div>
+        </div>
+        <div class="columns-3">
+            <div class="card-container">
+                <div class="element-header-background error-header">
+                    <div class="element-topic">
+                        Error
+                    </div>
+                </div>
+                <div class="row container-fluid error-content">
+                    <div><i class="fas fa-exclamation-circle fa-3x" style="padding-top: 15px;
+                        color: #dc483a;"></i></div>
+                    <div class="info-message" style="padding-bottom: unset;">Device couldn't be configured!</div>
+                </div>
+                <div class="popup-controls">
+                    <div class="cancel-btn">Okay</div>
+                    <div class="cancel-btn">Try again</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add active class to the color button (highlight it)
+        var colortype = document.getElementById("color-select");
+        var coloritem = colortype.getElementsByClassName("color-item");
+        for (var i = 0; i < coloritem.length; i++) {
+            coloritem[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active-color");
+                current[0].className = current[0].className.replace(" active-color", "");
+                this.className += " active-color";
+            });
+        }
+
+        // Add active class to the color button (highlight it)
+        var actype = document.getElementById("ac-direction");
+        var acitem = actype.getElementsByClassName("direction-item");
+        for (var i = 0; i < acitem.length; i++) {
+            acitem[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active-direction");
+                current[0].className = current[0].className.replace(" active-direction", "");
+                this.className += " active-direction";
+            });
+        }
+    </script>
+</body>
+
+</html>
